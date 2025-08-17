@@ -5,16 +5,16 @@ let g:autoloaded_narrow_search = 1
 " Simple patterns for ripgrep to find function/class definitions
 " These are PCRE patterns, not Vim regex
 let s:patterns = [
-  \ '^\s*def\s+\w+\s*\(',                                  " Python functions
-  \ '^\s*class\s+\w+',                                       " Python/Java/JS classes  
-  \ '^\s*function\s+\w+\s*\(',                              " JavaScript functions
-  \ '^\s*const\s+\w+\s*=\s*(async\s+)?\(',                " JS arrow functions
-  \ '^\s*func\s+(\(\w+\)\s+)?\w+\s*\(',                   " Go functions
-  \ '^\s*(public|private|protected)?\s*\w+\s+\w+\s*\(',   " Java/C++ methods
-  \ '^\s*(struct|enum)\s+\w+',                              " C/C++/Rust/Go types
-  \ '^\s*interface\s+\w+',                                  " TypeScript/Java interfaces
-  \ '^\s*export\s+(function|class|const)\s+\w+',           " ES6 exports
-\]
+  \ '^\s*def\s+\w+\s*\(',
+  \ '^\s*class\s+\w+',
+  \ '^\s*function\s+\w+\s*\(',
+  \ '^\s*const\s+\w+\s*=\s*(async\s+)?\(',
+  \ '^\s*func\s+(\(\w+\)\s+)?\w+\s*\(',
+  \ '^\s*(public|private|protected)?\s*\w+\s+\w+\s*\(',
+  \ '^\s*(struct|enum)\s+\w+',
+  \ '^\s*interface\s+\w+',
+  \ '^\s*export\s+(function|class|const)\s+\w+'
+  \]
 
 " Use ripgrep to collect matches and return a list of lines:  file:lnum:preview
 function! s:collect_candidates() abort
