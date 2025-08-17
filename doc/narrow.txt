@@ -1,0 +1,24 @@
+*Narrow.txt*  Narrow-Search plugin                                   August 2025
+
+                                  *:Narrow*
+:Narrow {start} {end} or visually *:Narrow*
+        Opens the selected line range in a temporary "narrowed" buffer.  All
+        motions such as |gg| |G|, |:%| work only inside the slice.  |:w| writes
+        changes back into the original file, expanding or shrinking the region.
+
+                                  *:NarrowSearch*
+:NarrowSearch
+        Scans the current working directory for function / class definitions
+        (hard-coded regexes for C/C++, Python, Java, JavaScript/TypeScript,
+        Go, Swift).  Presents them in a Telescope or fzf picker (quickfix if
+        neither is available).  Selecting an entry opens it in a narrowed
+        buffer centred on that definition.
+
+------------------------------------------------------------------------------
+INSTALLATION
+>  Plug 'your-github-name/narrow-search'            " vim-plug
+>  { 'narrow-search' }                              " lazy.nvim
+>  packadd! narrow-search                           " built-in packages
+------------------------------------------------------------------------------
+LICENSE
+MIT
